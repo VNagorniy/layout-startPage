@@ -2,7 +2,7 @@
 .sidebar {
   padding: 50px 15px 60px 55px;
   width: 252px;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -63,4 +63,107 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 16px;
+}
+
+/* Main */
+
+.main {
+  padding-top: 45px;
+  width: 1100px;
+
+  background-color: aqua;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+  margin-bottom: 70px;
+}
+
+/* Search */
+
+.search {
+  width: 490px;
+  height: 44px;
+}
+.search-label {
+  height: 100%;
+  display: flex;
+}
+.search-icon {
+}
+.search-input {
+  padding: 0 17px;
+  flex-grow: 1;
+
+  font-size: 17px;
+  font-weight: 500;
+  font-family: 'Circular Std';
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Header nav */
+
+.nav-header {
+  font-size: 17px;
+  font-family: 'Circular Std';
+  font-weight: 500;
+}
+
+.nav-header-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header-link-text {
+  position: relative;
+}
+
+.nav-header-link-text::after {
+  position: absolute;
+  left: 0;
+  width: 0%;
+  bottom: -9px;
+
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: black;
+
+  transition: width 0.2s ease-in;
+}
+
+.nav-header-link-text:hover::after {
+  width: 100%;
+}
+
+.nav-header-link-text.active::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -9px;
+
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: black;
+}
+
+.nav-header-link-text + .nav-header-link-text {
+  margin-left: 42px;
+}
+
+.nav-header-link-text + .nav-header-link-icon {
+  margin-left: 50px;
+}
+
+.nav-header-link-icon + .nav-header-link-icon {
+  margin-left: 25px;
 }
